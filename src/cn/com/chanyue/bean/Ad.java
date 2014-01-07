@@ -39,4 +39,42 @@ public class Ad {
 	 */
 	@Column("addTime")
 	private java.util.Date addTime;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public java.util.Date getAddTime() {
+		return addTime;
+	}
+	public void setAddTime(java.util.Date addTime) {
+		this.addTime = addTime;
+	}
 }
