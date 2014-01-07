@@ -25,13 +25,13 @@
 				<li><a href="/news/">资讯</a></li>
 			</ul>
 		</div>
-			#include("top_ads.jetx")
+			#include("top_ads.jetx", {ads: obj.ads})
 
-			#include("top_news.jetx")
+			#include("top_news.jetx", {newses: obj.newses})
 
-			#include("hot_games.jetx")
+			#include("hot_games.jetx", {hots: obj.hots})
 
-			#include("top_games.jetx")
+			#include("top_games.jetx", {tops: obj.tops})
 
 			#include("foot.jetx")
 	</div>

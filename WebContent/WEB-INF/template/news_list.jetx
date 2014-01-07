@@ -1,3 +1,4 @@
+#define(java.util.Map obj)
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,9 +25,9 @@
 				<li><a href="/news/" class="red">资讯</a></li>
 			</ul>
 		</div>
-		#include("top_ads.jetx")
+		#include("top_ads.jetx", {ads: obj.ads})
 
-		#include("newslist.jetx")
+		#include("newslist.jetx", {newses: obj.newses})
 
 		#include("foot.jetx")
 	</div>

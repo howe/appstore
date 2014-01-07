@@ -2,7 +2,7 @@
 <div class="gamelist">
 	<h3><span>新游推荐</span> <a href="/game/">更多</a></h3>
 	<ul>
-	#for (com.liebao.bean.Game game : obj.games)
+	#for (com.liebao.bean.Game game : games)
 		<li>
 			<div class="game">
 				<p><a href="/game/id/${game?.id}"><img src="/images/game/icon/${game?.id}.png" width="60" height="60"></a></p>

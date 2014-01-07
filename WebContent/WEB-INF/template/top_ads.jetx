@@ -1,7 +1,7 @@
 <!-- 幻灯广告 start -->
 <div id="banner">
 	<ul id="slides">
-		#for (com.liebao.bean.Ad ad : obj.ads)
+		#for (com.liebao.bean.Ad ad : ads)
 			<li style="background:url(/images/guanggao/${ad?.type}/${ad?.id}.jpg) no-repeat center;"><a href="${ad?.url}">${ad?.title}</a></li>
 		#end
 	</ul>

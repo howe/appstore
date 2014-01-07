@@ -2,7 +2,7 @@
 <div class="newslist">
 	<h3><span>资讯列表</span> <a>全部</a></h3>
 	<ul>
-		#for (com.liebao.bean.News news : obj.newses)
+		#for (com.liebao.bean.News news : newses)
 		<li><label><img src="/images/news/{news?.id}.png" width="60" height="60"></label>
 		<p>
 		<a href="/news/id/{news?.id}" class="title mb5px">${@(cn.com.chanyue.tool.ToolUtility).queryGameNameById(news?.gid)}{news?.title}</a>
