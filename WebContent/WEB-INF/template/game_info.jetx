@@ -24,7 +24,7 @@ function weixinShareTimeline(){
 		//"img_width":"640",
 		//"img_height":"640",
 		//下面替换成自己的域名
-		"link":'http://www.chanyue.com.cn/game/id/${game?.id}',
+		"link":'http://xxxxxxxx.com/game/id/${game?.id}',
 		"desc": '${game?.gameName}（${game?.platform}）手机游戏下载 - 手游下载 ',
 		"title":'${game?.gameName}（${game?.platform}）手机游戏下载 - 手游下载'
 	});	

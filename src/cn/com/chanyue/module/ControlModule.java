@@ -39,17 +39,17 @@ public class ControlModule {
 			String weiboUrl = "http://weibo.cn/ext/share?ru="
 					+ CodeCryption.encode(
 							"URL",
-							URLTool.long2Short("http://wx.8wan.com/game/id/"
+							URLTool.long2Short("http://xxxxxxxx.com/game/id/"
 									+ gid))
 					+ "&rt="
-					+ CodeCryption.encode("URL", " - 手游下载 - 8WAN游戏")
+					+ CodeCryption.encode("URL", " - 手游下载")
 					+ "&st="
 					+ System.currentTimeMillis()
 					/ 1000
-					+ "&appkey=2011743462&relateUid=3195665157&skipshow=1&ntitle="
+					+ "&appkey=xxxxxxxxxxxxxx&relateUid=xxxxxxxxxxxx&skipshow=1&ntitle="
 					+ CodeCryption.encode(
 							"URL",
-							"我在8WAN游戏下载了" + game.getGameName() + "（"
+							"我下载了" + game.getGameName() + "（"
 									+ game.getPlatform() + "），大家都来玩啊~~");
 			map.put("weiboUrl", weiboUrl);
 		}
