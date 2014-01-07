@@ -345,9 +345,9 @@ public class ToolUtility {
 	 * @param gid
 	 * @return
 	 */
-	public static String queryGameNameById(String gid){
+	public static String queryGameNameById(Integer gid){
 		
-		Game game = new GameFace().queryGame(gid);
+		Game game = new GameFace().queryGame(gid.toString());
 		if(game!=null)
 			return "["+game.getGameName()+"（"+game.getPlatform()+"）]";
 		else
