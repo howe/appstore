@@ -14,7 +14,7 @@ import cn.com.chanyue.bean.Ad;
 public class AdsFace{
 
 	Ioc ioc = new NutIoc(new JsonLoader("ioc/dao.js"));
-	private Dao dao = ioc.get(Dao.class, "dao");
+	private Dao dao = ioc.get(Dao.class, "dao1");
 	
 	public List<Ad> queryAdsList(String type) {
 
