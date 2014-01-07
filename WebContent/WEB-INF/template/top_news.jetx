@@ -1,0 +1,9 @@
+<!-- 新闻列表 start -->
+<div class="news">
+	<ul>
+		#for (com.liebao.bean.News news : obj.newses)
+		<li><label>{news?.sort}</label><a href="/news/id/{news?.id}">${@(cn.com.chanyue.tool.ToolUtility).queryGameNameById(news?.gid)}{news?.title}</a></li>
+		#end
+	</ul>
+</div>
+<!-- 新闻列表 end -->

@@ -1,0 +1,13 @@
+<!-- 资讯页 游戏下载 start -->
+<div id="bottomgame" class="gameslist">
+	<ul>
+		<li class="icon"><img src="/images/game/icon/${game?.id}.png" width="60" height="60"></li>
+		<li class="text">
+			<p class="title mb5px">${game?.gameName}（${game?.platform}）</p>
+			<p class="description mb5px">更新时间:${(game?.update).format("yyyy-MM-dd")}</p>
+			<p class="description">${(game?.type).toUpperCase()} | ${game?.size}M | ${game?.downloads}次下载</p>
+		</li>
+		<li class="download"><a href="${game?.download}" target="_bank" class="btn">下载</a></li>
+	</ul>
+</div>
+<!-- 资讯页 游戏下载 end -->

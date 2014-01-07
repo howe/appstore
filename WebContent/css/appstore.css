@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*----公共----*/
+*{margin:0;padding:0;}
+img{border:0;}
+ul,ol,li{list-style:none;}
+a{color:#333333;text-decoration:none;cursor:pointer;}
+a:hover{text-decoration:none;}
+input{vertical-align:middle;color:#333333;}
+body{font:14px Microsoft YaHei;color:#333333;}
+i{display:-moz-inline-stack;display:inline-block;*display: inline;vertical-align:middle;zoom:1;}
+#wrapper{width:100%;margin:0px auto}
+.btn{display:block;background:#f90; height:28px; line-height:28px; border-radius:5px; text-align:center; color:#FFF; padding:0px 10px;}
+.title{color:#000;}
+.description{color:#999;}
+.mb5px{margin-bottom:5px;}
+/*----头部----*/
+.header{height:60px;background:url(/images/head.png) no-repeat right;}
+.logo{padding:10px 0px 0px 10px;}
+.logo a{display:block;background:url(/images/logo.png) no-repeat; width:113px; height:40px;text-indent:-999em;}
+.nav{height:40px; background:#f90;}
+.nav ul{overflow:hidden;}
+.nav ul li{width:100px;float:left;height:40px;text-align:center;}
+.nav ul li a{display:block;background:#f90;font-size:16px;color:#FFF;height:40px;line-height:40px;}
+.nav ul li a:hover{background:#f60;}
+.nav ul li a.red{background:#f60;}
+#banner {width:100%;height:200px;position:relative;background:#f7f7f7}
+#slides {display:block; width:100%; height:200px;position:relative}
+#slides li {display:block; width:100%; height:100%;position:absolute}
+#slides li.banner01{background:url(/images/guanggao/index/01.jpg) no-repeat center;}
+#slides li.banner02{background:url(/images/guanggao/index/02.jpg) no-repeat center;}
+#slides li.banner03{background:url(/images/guanggao/index/03.jpg) no-repeat center;}
+#slides li a{display:block;width:100%;height:40px;line-height:40px;text-indent:10px;background:#000;color:#FFF;position:absolute;bottom:0px;-moz-opacity: 0.5;opacity:.50;filter: alpha(opacity=50);}
+#pagination{display:block;list-style:none;position:absolute;right:5%;top:170px;z-index:9900;}
+#pagination li {display:block;width:20px;height:20px;float:left;margin-left:15px;border-radius:10px; background:#FFF }
+#pagination li a{display:block;width:100%;height:100%;text-indent:-9999px;}
+#pagination li.current {background-color:#333333;}
+/*----新闻----*/
+.news{width:100%;}
+.news li{padding:10px 0px; border-bottom:solid #e4e4e4 1px;}
+.news li label{padding:0px 10px; margin-right:10px;border-right:solid #cfcfcf 2px;}
+.newslist{width:100%;}
+.newslist h3{position:relative;height:40px;border-bottom:solid #ddd 3px;}
+.newslist h3 span{display:inline-block;iheight:40px;line-height:40px; padding:0px 10px;border-bottom:solid #F60 3px; color:#F60;}
+.newslist h3 a{position:absolute; top:10px; right:10px;}
+.newslist li{padding:10px 0px; border-bottom:solid #e4e4e4 1px;overflow:hidden;}
+.newslist li label{padding:0px 10px;vertical-align:middle; float:left;}
+.newslist li p a{display:block;}
+/*----游戏----*/
+.gamelist{width:100%;}
+.gamelist h3{position:relative;height:40px;border-bottom:solid #ddd 3px;}
+.gamelist h3 span{display:inline-block;iheight:40px;line-height:40px; padding:0px 10px;border-bottom:solid #F60 3px; color:#F60;}
+.gamelist h3 a{position:absolute; top:10px; right:10px;}
+.gamelist ul{overflow:hidden;}
+.gamelist ul li{float:left;width:50%;}
+.gamelist ul li .game{padding:10px 0px 10px 10px; border-bottom:solid #ddd 1px; overflow:hidden;}
+.gamelist ul li .boundary{border-right:solid #ddd 1px;}
+.gamelist ul li .game p{float:left; margin-right:9px}
+.gamelist ul li .game span{display:block;}
+.gameslist{width:100%;}
+.gameslist h3{position:relative;height:40px;border-bottom:solid #ddd 3px;}
+.gameslist h3 span{display:inline-block;iheight:40px;line-height:40px; padding:0px 10px;border-bottom:solid #F60 3px; color:#F60;}
+.gameslist h3 a{position:absolute; top:10px; right:10px;}
+.gameslist ul{padding:10px 0px; border-bottom:solid #e4e4e4 1px;overflow:hidden;}
+.gameslist ul li.icon{float:left;padding:0px 10px}
+.gameslist ul li.text{float:left;}
+.gameslist ul li.download{float:right;padding:15px 10px 0px 10px}
+
+/*----详细页面----*/
+.contentop{background:#f90;font-size:16px;color:#FFF;height:40px;line-height:40px; text-align:center; overflow:hidden;}
+.contentop a{ float:left;width:40px;text-align:center;font:24px Arial;color:#FFF; padding-top:7px;}
+.newsconten{ padding:10px;line-height:25px;}
+.newsconten p.text{margin-top:5px;}
+.gamesconten{ overflow:hidden;}
+.gamestitle{ width:100%;overflow:hidden; padding:20px 10px;}
+.gamestitle li{float:left;}
+.gamestitle li.icon{ margin-right:10px;}
+.gamesimg{width:100%;overflow:hidden;}
+.gamesimg li{float:left;width:50%;text-align:center; margin-bottom:15px;}
+.imgcollapse{display:none}
+.imgunfold{display:block}
+.imgactive{display:block}
+.gamestext{padding:10px;line-height:25px;}
+.textcollapse{display:none}
+.textunfold{display:block}
+.textactive{display:block}
+.Pulldown{ position:relative;border-top:solid #dfdfdf 1px;height:30px;}
+.displaybtn{position:absolute;top:-1px;width:100%}
+.displaybtn a{margin:0px auto;width:100px;background:#FFF; display:block;height:30px; line-height:30px;border-bottom:solid #dfdfdf 1px;border-left:solid #dfdfdf 1px;border-right:solid #dfdfdf 1px; text-align:center; border-radius:0px 0px 5px 5px;}
+.edition{padding:20px; overflow:hidden;}
+.edition li{ float:left; width:50%}
+.downloadbtn{background:#f1f1f1; border-bottom:solid #dfdfdf 1px;border-top:solid #dfdfdf 1px; padding:20px}
+.downloadbtn a{ margin:0px auto;display:block;background:#f90; width:40%; height:40px; line-height:40px; border-radius:5px; text-align:center; color:#FFF; padding:0px 10px;}
+.share{padding:20px;overflow:hidden;}
+.share li{ float:left; width:50%; text-align:center;}
+/*----底部----*/
+.footer{height:40px;background:#f7f7f7;text-align:center;}
+.footer a{display:inline-block;height:40px;line-height:40px;width:60px;text-align:center;font-size:16px;}
+.footer a.gotop{ color:#f60; background:#fce7c9;}
+.copyright{ height:40px; line-height:40px; text-align:center;}
+/*----底部推荐游戏----*/
+#bottomgame{width:100%;background:#FFF;box-shadow:0px -1px 2px #aaa;position:fixed;bottom:0;_bottom:auto;left:0;z-index:10000;_position:absolute;overflow:visible;_top:expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight);}

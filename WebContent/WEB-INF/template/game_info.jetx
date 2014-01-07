@@ -1,0 +1,80 @@
+#define(java.util.Map obj)
+#set(com.liebao.bean.Game game=obj.game)
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+#if(game==null)
+<meta http-equiv="refresh" content="0; url=/404.html" />
+#else
+#set(String weiboUrl=obj.weiboUrl)
+<title>${game?.gameName}（${game?.platform}）- 游戏下载 - 微信平台</title>
+<link href="/css/appstore.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery.jslides.js"></script>
+<script language="javascript" type="text/javascript">
+function weixinShareTimeline(){
+	WeixinJSBridge.invoke('shareTimeline',{
+		"img_url":'/images/game/icon/${game?.id}.png',
+		//"img_width":"640",
+		//"img_height":"640",
+		//下面替换成自己的域名
+		"link":'http://www.chanyue.com.cn/game/id/${game?.id}',
+		"desc": '${game?.gameName}（${game?.platform}）手机游戏下载 - 手游下载 ',
+		"title":'${game?.gameName}（${game?.platform}）手机游戏下载 - 手游下载'
+	});	
+}
+</script>
+</head>
+<body>
+	<div id="wrapper">
+	<div class="contentop"><a href="/game/">&lt;</a>${game?.gameName}（${game?.platform}）</div>
+	<div class="gamesconten">
+		<ul class="gamestitle">
+			<li class="icon"><img src="/images/game/icon/${game?.id}.png" width="60" height="60"></li>
+			<li>
+				<p class="title mb5px">${game?.gameName}（${game?.platform}）</p>
+				<p class="description mb5px">更新时间:${(game?.update).format("yyyy-MM-dd")}</p>
+				<p class="description">${(game?.type).toUpperCase()} | ${game?.size}M | ${game?.downloads}次下载</p>
+			</li>
+		</ul>
+		<ul class="gamesimg">
+			<li><img src="/images/game/screen/${game?.id}_1.png" width="140" height="212"></li>
+			<li><img src="/images/game/screen/${game?.id}_2.png" width="140" height="212"></li>
+		</ul>
+		<ul class="gamesimg imgcollapse">
+			<li><img src="/images/game/screen/${game?.id}_3.png" width="140" height="212"></li>
+			<li><img src="/images/game/screen/${game?.id}_4.png" width="140" height="212"></li>
+		</ul>
+			<div class="Pulldown"><span class="displaybtn"><a class="imgunfold imgactive">4张截图 ∨</a></span></div>
+			<div class="gamestext">
+				<p class="title">游戏简介</p>
+				<p class="description">
+					#if((game?.introduction).length() > 50)
+					${(game?.introduction).substring(0, 50)}<span class="textcollapse">${(game?.introduction).substring(50)}</span>
+					#else
+					${game?.introduction}
+					#end
+				</p>
+			</div>
+			<div class="Pulldown"><span class="displaybtn"><a class="textunfold textactive">展开全文 ∨</a></span></div>
+		<ul class="edition">
+			<li><span class="title">当前版本</span> <span class="description">v${game?.version}</span></li>
+			<li><span class="title">开发商</span> <span class="description">${game?.developers}</span></li>
+		</ul>
+			<div class="downloadbtn"><a href="${game?.download}" target="_bank">☞ 免费下载</a></div>
+		<ul class="share">
+			<li><a href="${weiboUrl}"><img src="/images/weibo.png" width="120" height="25"></a></li>
+			<li><a onClick="weixinShareTimeline();"><img src="/images/weixin.png" width="120" height="25"></a></li>
+		</ul>
+	</div>
+	#include("foot.jetx")
+	</div>
+</body>
+#end
+</html>
