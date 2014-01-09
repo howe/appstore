@@ -25,9 +25,30 @@
 				<li><a href="/news/" class="red">资讯</a></li>
 			</ul>
 		</div>
-		#include("top_ads.jetx", {ads: obj.ads})
+		<!-- 幻灯广告 start -->
+		<div id="banner">
+			<ul id="slides">
+				#for (com.liebao.bean.Ad ad : obj.ads)
+					<li style="background:url(/images/guanggao/${ad?.type}/${ad?.id}.jpg) no-repeat center;"><a href="${ad?.url}">${ad?.title}</a></li>
+				#end
+			</ul>
+		</div>
+		<!-- 幻灯广告 end -->
 
-		#include("newslist.jetx", {newses: obj.newses})
+		<!-- 资讯列表 start -->
+		<div class="newslist">
+			<h3><span>资讯列表</span> <a>全部</a></h3>
+			<ul>
+				#for (com.liebao.bean.News news : obj.newses)
+				<li><label><img src="/images/news/{news?.id}.png" width="60" height="60"></label>
+				<p>
+				<a href="/news/id/{news?.id}" class="title mb5px">${@(cn.com.chanyue.tool.ToolUtility).queryGameNameById(news?.gid)}{news?.title}</a>
+				<a href="/news/id/{news?.id}" class="description">${@(cn.com.chanyue.ToolUtility).splitAndFilterString(news?.content, 25)}
+		</a></p></li>
+				#end
+			</ul>
+		</div>
+		<!-- 资讯列表 end -->
 
 		#include("foot.jetx")
 	</div>
