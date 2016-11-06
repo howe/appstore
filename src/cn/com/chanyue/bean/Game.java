@@ -52,8 +52,8 @@ public class Game {
 	/**
 	 * 更新时间
 	 */
-	@Column("update")
-	private java.util.Date update;
+	@Column("updates")
+	private java.util.Date updates;
 	/**
 	 * 固件版本
 	 */
@@ -180,12 +180,12 @@ public class Game {
 		this.version = version;
 	}
 
-	public java.util.Date getUpdate() {
-		return update;
+	public java.util.Date getUpdates() {
+		return updates;
 	}
 
-	public void setUpdate(java.util.Date update) {
-		this.update = update;
+	public void setUpdates(java.util.Date updates) {
+		this.updates = updates;
 	}
 
 	public String getFirmware() {

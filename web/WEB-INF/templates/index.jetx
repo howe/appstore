@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>微信平台</title>
+<link href="/css/appstore.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery.jslides.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header">
+			<div class="logo"><a href="/">微信平台</a></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="/" class="red">首页</a></li>
+				<li><a href="/game/">游戏</a></li>
+				<li><a href="/news/">资讯</a></li>
+			</ul>
+		</div>
+			<!-- 幻灯广告 start -->
+			<div id="banner">
+				<ul id="slides">
+					#for (cn.com.chanyue.bean.Ad ad : obj.ads)
+						<li style="background:url('/images/guanggao/${ad.type}/${ad.id}.jpg') no-repeat center;"><a href="${ad.url}">${ad.title}</a></li>
+					#end
+				</ul>
+			</div>
+			<!-- 幻灯广告 end -->
+
+			<!-- 新闻列表 start -->
+			<div class="news">
+				<ul>
+					#for (cn.com.chanyue.bean.News news : obj.newses)
+					<li><label>{news.sort}</label><a href="/news/id/{news.id}">${queryGameNameById(news.gid)}{news.title}</a></li>
+					#end
+				</ul>
+			</div>
+			<!-- 新闻列表 end -->
+
+			<!-- 热门游戏 start -->
+			<div class="gamelist">
+				<h3><span>热门游戏</span> <a href="/game/">更多</a></h3>
+				<ul>
+				#for (cn.com.chanyue.bean.Game game : obj.hots)
+					<li>
+						<div class="game">
+							<p><a href="/game/id/${game.id}"><img src="/images/game/icon/${game.id}.png" width="60" height="60"></a></p>
+							<p>
+								<span class="title">${game.gameName}（${game.platform}）</span>
+								<span class="description">${game.type.toUpperCase()} ${game.size}M</span>
+								<span><a href="/game/id/${game.id}" class="btn">下载</a></span>
+							</p>
+						</div>
+					</li>
+				#end	
+				</ul>
+			</div>
+			<!-- 热门游戏 end -->
+
+			<!-- 推荐游戏 start -->
+			<div class="gamelist">
+				<h3><span>新游推荐</span> <a href="/game/">更多</a></h3>
+				<ul>
+				#for (cn.com.chanyue.bean.Game game : obj.tops)
+					<li>
+						<div class="game">
+							<p><a href="/game/id/${game.id}"><img src="/images/game/icon/${game.id}.png" width="60" height="60"></a></p>
+							<p>
+								<span class="title">${game.gameName}（${game.platform}）</span>
+								<span class="description">${game.type.toUpperCase()} ${game.size}M</span>
+								<span><a href="/game/id/${game.id}" class="btn">下载</a></span>
+							</p>
+						</div>
+					</li>
+				#end
+				</ul>
+			</div>
+			<!-- 推荐游戏 end -->
+
+			#include("foot.jetx")
+	</div>
+</body>
+</html>
